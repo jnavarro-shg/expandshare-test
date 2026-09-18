@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExpandShare HTML Test</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:650px;margin:40px auto;padding:20px;color:#222}
+.card{border:1px solid #ccc;border-radius:10px;padding:24px}
+h1{margin-top:0}
+label{display:block;padding:9px 0}
+button{margin-top:16px;padding:10px 16px;font-size:16px;cursor:pointer}
+#status{margin-top:16px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>ODA Opening Checklist — Test</h1>
+<p>This is a simple HTML test for ExpandShare.</p>
+<label><input type="checkbox" class="item"> Check cooler temperatures</label>
+<label><input type="checkbox" class="item"> Review production schedule</label>
+<label><input type="checkbox" class="item"> Verify work area is clean and organized</label>
+<button type="button" id="check">Check Completion</button>
+<div id="status">0 of 3 completed</div>
+</div>
+<script>
+const items=[...document.querySelectorAll('.item')];
+const status=document.getElementById('status');
+function update(){
+ const done=items.filter(x=>x.checked).length;
+ status.textContent=done+' of '+items.length+' completed';
+}
+items.forEach(x=>x.addEventListener('change',update));
+document.getElementById('check').addEventListener('click',()=>{
+ update();
+ if(items.every(x=>x.checked)) status.textContent='Complete — all 3 items checked!';
+});
+</script>
+</body>
+</html>
