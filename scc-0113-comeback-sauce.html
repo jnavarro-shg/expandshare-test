@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCC 0113 — COMEBACK SAUCE</title>
+<style>
+:root{--ink:#1f2933;--muted:#667085;--line:#d0d5dd;--panel:#f8fafc;--dark:#20252b}
+*{box-sizing:border-box}
+body{margin:0;background:#eef1f4;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+.recipe{max-width:900px;margin:0 auto;background:#fff;min-height:100vh}
+header{background:var(--dark);color:#fff;padding:24px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+h1{font-size:38px;line-height:1.05;margin:6px 0 18px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.meta div{border:1px solid rgba(255,255,255,.25);padding:10px;border-radius:7px}
+.meta span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.7}
+.meta strong{font-size:17px}
+.actions{padding:14px 22px 0;display:flex;justify-content:flex-end}
+.print-btn{border:0;border-radius:7px;background:var(--dark);color:#fff;font-weight:700;font-size:16px;padding:11px 16px;min-height:44px;cursor:pointer}
+main{padding:0 22px 24px}
+h2{font-size:20px;margin:28px 0 12px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.notice{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:12px 14px}
+.lean{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lean>div{border:1px solid var(--line);border-radius:8px;padding:13px;background:var(--panel)}
+.lean strong{display:block;margin-bottom:5px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td:last-child,th:last-child{text-align:right;font-weight:700}
+ol{padding-left:24px}li{padding:7px 0}
+.finish{border:2px solid var(--ink);border-radius:8px;padding:15px;font-size:17px}
+footer{padding:0 22px 30px;color:var(--muted);font-size:12px}
+@media(max-width:600px){body{background:#fff}header{padding:20px 16px}main{padding:0 16px 20px}h1{font-size:32px}.meta{grid-template-columns:1fr 1fr}.lean{grid-template-columns:1fr}.actions{padding:12px 16px 0}.print-btn{width:100%}th,td{padding:9px 5px}}
+@media print{body{background:#fff}.recipe{max-width:none;min-height:0}.actions{display:none!important}header{background:#fff;color:#000;padding:0 0 12px;border-bottom:2px solid #000}.kicker,.meta span{opacity:1}.meta div{border:1px solid #999}main{padding:0}.notice,.lean>div{background:#fff}footer{padding:12px 0 0}}
+.muted-note{margin:0;color:var(--muted);font-style:italic}
+.lean ul{margin:0;padding-left:20px}.lean li{padding:3px 0}
+
+
+.yield-meta select{width:100%;margin-top:3px;border:0;border-radius:5px;background:#fff;color:var(--ink);font:inherit;font-weight:700;font-size:17px;padding:4px 28px 4px 6px;cursor:pointer}
+@media print{.yield-meta select{appearance:none;-webkit-appearance:none;padding:0;background:transparent;color:#000}}
+
+
+.yield-meta{text-align:center}
+.yield-meta span{text-align:center}
+.yield-meta select{text-align:center;text-align-last:center}
+.yield-grams{font-size:13px;margin-top:3px;opacity:.8;font-weight:700;text-align:center}
+</style>
+</head>
+<body>
+<article class="recipe">
+<header>
+<div class="kicker">SPICE CATERING COMPANY • SHG Culinary Recipe</div>
+<h1>COMEBACK SAUCE</h1>
+<div class="meta">
+<div><span>Reference #</span><strong>SCC 0113</strong></div>
+<div><span>Prep Time</span><strong>10 MIN</strong></div>
+<div class="yield-meta"><span>Yield</span>
+<select id="yieldSelect" aria-label="Recipe yield">
+<option value="0.5">3 QT</option>
+<option value="1" selected>6 QT</option>
+<option value="2">12 QT</option>
+</select>
+<div id="yieldGrams" class="yield-grams">5566 g</div>
+</div>
+<div><span>Shelf Life</span><strong>6 DAYS</strong></div>
+</div>
+</header>
+<div class="actions"><button class="print-btn" id="printRecipe" type="button" onclick="window.print(); return false;">Print Recipe</button>
+</div>
+<main>
+<section><h2>Allergen Call Out</h2><div class="notice">CONTAINS: NONE OF THE TOP 9 ALLERGENS</div></section>
+
+<section><h2>LEAN Working</h2>
+<div class="lean">
+<div><strong>LEAN Working</strong><ul><li>Stage the stainless steel mixing bowl, wire whisk, rubber spatula and Tiper Tie bags.</li></ul></div>
+<div><strong>Before You Start</strong><ul><li>Gather tools + equipment, scale and portion ingredients, stage Tiper Tie bags and scale to portion Comeback Sauce.</li></ul></div>
+</div></section>
+
+<section><h2>Ingredients</h2>
+<table><thead><tr><th>Ingredient</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>MAYONNAISE</td><td class="amount" data-base="3570">3570 g</td></tr>
+<tr><td>KETCHUP</td><td class="amount" data-base="1299">1299 g</td></tr>
+<tr><td>FRANK'S HOT SAUCE</td><td class="amount" data-base="488">488 g</td></tr>
+<tr><td>WORCESTERSHIRE SAUCE</td><td class="amount" data-base="162">162 g</td></tr>
+<tr><td>GRANULATED GARLIC</td><td class="amount" data-base="130">130 g</td></tr>
+<tr><td>TOASTED &amp; GROUND BLACK PEPPERCORN</td><td class="amount" data-base="17">17 g</td></tr>
+</tbody></table></section>
+
+<section><h2>Method</h2>
+<ol>
+<li>Combine all ingredients in the stainless steel mixing bowl. With the wire whisk, mix and combine the ingredients thoroughly.</li>
+</ol></section>
+
+<section><h2>Package &amp; Rotate</h2><div class="finish">Portion the sauce to 2000 g in the Tiper Tie bags. Label, date + rotate.</div></section>
+</main>
+<footer>SCC 0113 • COMEBACK SAUCE • Revised 2026.09.24</footer>
+</article>
+
+<script>
+(function(){
+  var select=document.getElementById('yieldSelect');
+  var grams=document.getElementById('yieldGrams');
+  if(!select) return;
+  function fmt(n){return (Number.isInteger(n)?n:n.toFixed(1))+' g';}
+  function scale(){
+    var f=parseFloat(select.value);
+    document.querySelectorAll('.amount').forEach(function(cell){
+      cell.textContent=fmt(parseFloat(cell.dataset.base)*f);
+    });
+    grams.textContent=fmt(5566*f);
+  }
+  select.addEventListener('change',scale);
+  scale();
+})();
+</script>
+</body></html>
