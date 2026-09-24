@@ -32,7 +32,37 @@ ol{padding-left:24px}li{padding:7px 0}
 .finish{border:2px solid var(--ink);border-radius:8px;padding:15px;font-size:17px}
 footer{padding:0 22px 30px;color:var(--muted);font-size:12px}
 @media(max-width:600px){body{background:#fff}header{padding:20px 16px}main{padding:0 16px 20px}h1{font-size:32px}.meta{grid-template-columns:1fr 1fr}.lean{grid-template-columns:1fr}.actions{padding:12px 16px 0}.print-btn{width:100%}th,td{padding:9px 5px}}
-@media print{body{background:#fff}.recipe{max-width:none;min-height:0}.actions{display:none!important}header{background:#fff;color:#000;padding:0 0 12px;border-bottom:2px solid #000}.kicker,.meta span{opacity:1}.meta div{border:1px solid #999}main{padding:0}.notice,.lean>div{background:#fff}footer{padding:12px 0 0}}
+@media print{
+@page{size:letter;margin:.34in}
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#fff;color:#111;font-size:10px;line-height:1.22}
+.recipe{max-width:none;min-height:0;margin:0;background:#fff}
+.actions{display:none!important}
+header{background:#fff;color:#111;padding:0 0 10px;border-bottom:3px solid #111}
+.kicker{font-size:8.5px;line-height:1.35;letter-spacing:.11em;opacity:1;max-width:240px}
+h1{font-size:27px;line-height:1;margin:5px 0 13px}
+.meta{grid-template-columns:repeat(4,1fr);gap:7px}
+.meta div{border:1px solid #999;border-radius:5px;padding:6px 8px;min-height:42px}
+.meta span{font-size:7.5px;letter-spacing:.04em;opacity:1}
+.meta strong{font-size:11px}
+.yield-meta select{appearance:none;-webkit-appearance:none;padding:0;background:transparent;color:#111;font-size:11px}
+main{padding:0}
+h2{font-size:13px;line-height:1.1;margin:12px 0 5px;border-bottom:2px solid #111;padding-bottom:4px}
+.notice{border:1px solid #999;background:#fff;border-radius:4px;padding:6px 8px;font-weight:700}
+.lean{grid-template-columns:1fr 1fr;gap:7px}
+.lean>div{border:1px solid #999;border-radius:5px;padding:6px 8px;background:#fff}
+.lean strong{margin-bottom:2px;font-size:10px}
+.lean ul{padding-left:14px}
+.lean li{padding:1px 0}
+table{font-size:9px}
+th,td{padding:4px 6px;border-bottom:1px solid #aaa}
+th{font-size:7.5px;color:#333}
+ol{margin:0;padding-left:20px}
+li{padding:2px 0}
+.finish{border:2px solid #222;border-radius:4px;padding:7px 8px;font-size:10px}
+footer{padding:9px 0 0;color:#555;font-size:7.5px}
+section{break-inside:avoid}
+}
 .muted-note{margin:0;color:var(--muted);font-style:italic}
 .lean ul{margin:0;padding-left:20px}.lean li{padding:3px 0}
 
