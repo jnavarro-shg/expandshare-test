@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCC 0116 — Tiramisu</title>
+<style>
+
+*{box-sizing:border-box}body{margin:0;background:#eef1f4;color:#1f2933;font-family:Arial,sans-serif;line-height:1.45}.recipe{max-width:900px;margin:auto;background:#fff;min-height:100vh}header{position:relative;background:#20252b;color:#fff;padding:24px}.kicker,.brand{max-width:calc(100% - 155px)}.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.8}.brand{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.65;margin-top:2px}h1{font-size:38px;margin:6px 0 18px}.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.meta div{border:1px solid #ffffff40;padding:10px;border-radius:7px}.meta span{display:block;font-size:11px;text-transform:uppercase;opacity:.7}.meta strong{font-size:17px}.print-actions{position:absolute;top:20px;right:24px}.print-button{appearance:none;border:2px solid #fff;border-radius:7px;background:#fff;color:#20252b;cursor:pointer;font:700 16px Arial,sans-serif;padding:11px 18px}.print-button:hover{background:#eef1f4}.print-button:focus-visible{outline:3px solid #a9d4ff;outline-offset:3px}main{padding:22px}h2{font-size:20px;margin:28px 0 12px;border-bottom:2px solid #1f2933;padding-bottom:6px}.notice,.lean>div{border:1px solid #d0d5dd;background:#f8fafc;border-radius:8px;padding:13px}.allergens{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.allergen{border:1px solid #d0d5dd;border-radius:999px;padding:5px 9px;font-size:13px;background:#fff}.lean{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lean strong{display:block;margin-bottom:5px}table{width:100%;border-collapse:collapse;font-size:16px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #d0d5dd}th{font-size:12px;text-transform:uppercase;color:#667085}td:last-child,th:last-child{text-align:right;font-weight:700}ol{padding-left:24px}li{padding:7px 0}.package{border:2px solid #1f2933;border-radius:8px;padding:15px;font-size:17px}footer{padding:20px 22px 30px;color:#667085;font-size:12px}@media(max-width:600px){body{background:#fff}header{padding:20px 16px}.kicker,.brand{max-width:calc(100% - 135px)}.print-actions{top:16px;right:16px}.print-button{font-size:14px;padding:9px 12px}main{padding:16px}h1{font-size:32px}.meta,.lean{grid-template-columns:1fr}}
+@page{size:Letter;margin:.45in}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;color:#111;font-size:9.5pt;line-height:1.22}
+  .recipe{max-width:none;min-height:0;margin:0;background:#fff}
+  header{background:#fff!important;color:#111;padding:0 0 10pt;border-bottom:2pt solid #111}
+  .kicker{font-size:8pt;opacity:1}
+  .brand{font-size:7pt;opacity:1}
+  h1{font-size:24pt;margin:2pt 0 8pt}
+  .meta{grid-template-columns:repeat(4,1fr);gap:6pt}
+  .meta div{border:1pt solid #777;border-radius:4pt;padding:5pt 7pt}
+  .meta span{font-size:7pt;opacity:1}
+  .meta strong{font-size:10pt}
+  .print-actions{display:none!important}
+  main{padding:0}
+  h2{font-size:12pt;margin:11pt 0 5pt;padding-bottom:2pt;border-bottom:1.5pt solid #111;break-after:avoid;page-break-after:avoid}
+  .notice,.lean>div{background:#fff;border:1pt solid #888;border-radius:4pt;padding:6pt}
+  .allergens{gap:3pt;margin-top:4pt}
+  .allergen{border:1pt solid #aaa;border-radius:10pt;padding:2pt 5pt;font-size:7.5pt}
+  .lean{gap:6pt}
+  .lean strong{margin-bottom:2pt}
+  table{font-size:9pt}
+  thead{display:table-header-group}
+  tr{break-inside:avoid;page-break-inside:avoid}
+  th,td{padding:4pt 5pt;border-bottom:1pt solid #bbb}
+  th{font-size:7.5pt;color:#333}
+  ol{margin:0;padding-left:18pt}
+  li{padding:2.5pt 0;break-inside:avoid;page-break-inside:avoid}
+  .package{border:1.5pt solid #111;border-radius:4pt;padding:7pt;font-size:10pt;break-inside:avoid;page-break-inside:avoid}
+  footer{padding:10pt 0 0;color:#444;font-size:7.5pt;break-inside:avoid;page-break-inside:avoid}
+}
+
+
+.group-row td{padding:13px 8px 6px;border-bottom:2px solid #1f2933;font-size:12px;font-weight:700!important;text-transform:uppercase;letter-spacing:.08em;color:#667085;text-align:left!important;background:#fff}
+.critical{list-style:none;margin:5px 0 8px -24px;border:2px solid #1f2933;border-radius:7px;padding:10px 12px;background:#f8fafc}
+@media print{
+.group-row td{padding:6pt 5pt 3pt;font-size:7.5pt;border-bottom:1.5pt solid #111}
+.critical{margin:3pt 0 5pt -18pt;border:1.5pt solid #111;border-radius:4pt;padding:6pt;background:#fff}
+}
+
+</style>
+</head>
+<body>
+<article class="recipe">
+<header>
+<div class="kicker">Spice Hospitality Group</div>
+<div class="brand">SPICE CATERING COMPANY</div>
+<h1>TIRAMISU</h1>
+<div class="meta">
+<div><span>Reference #</span><strong>SCC 0116</strong></div>
+<div><span>Prep Time</span><strong>45 MIN</strong></div>
+<div><span>Yield</span><strong>3 - 8X12 Pans</strong></div>
+<div><span>Shelf Life</span><strong>6 DAYS</strong></div>
+</div>
+<div class="print-actions"><button class="print-button" type="button" onclick="window.print()">Print Recipe</button></div>
+</header>
+
+
+
+<main>
+<section>
+<h2>Allergen Call Out</h2>
+<div class="notice"><strong>CONTAINS: MILK, EGG, WHEAT</strong></div>
+</section>
+
+<section>
+<h2>LEAN Working</h2>
+<div class="lean">
+<div><strong>LEAN Working</strong>Stage the 5 QT saucepan, three 5 QT stainless-steel mixing bowls, two wire whisks, rubber spatula, tabletop mixer and whisk attachments before starting.</div>
+<div><strong>Before You Start</strong>Bring the mascarpone and cream cheese to room temperature. Keep the prepared coffee mixture cold until assembly.</div>
+</div>
+</section>
+
+<section>
+<h2>Ingredients</h2>
+<table>
+<thead><tr><th>Ingredient</th><th>Amount</th></tr></thead>
+<tbody>
+<tr class="group-row"><td colspan="2">Mascarpone Cream</td></tr>
+<tr><td>Mascarpone Cheese</td><td>1,233 g</td></tr>
+<tr><td>Cream Cheese</td><td>411 g</td></tr>
+<tr><td>Heavy Whipping Cream</td><td>846 g</td></tr>
+<tr><td>Granulated Sugar</td><td>420 g</td></tr>
+<tr><td>Egg Yolks</td><td>18 ea</td></tr>
+
+<tr class="group-row"><td colspan="2">Spiced Coffee</td></tr>
+<tr><td>Rising Star Cold Brew Coffee</td><td>840 g</td></tr>
+<tr><td>Instant Espresso</td><td>30 g</td></tr>
+<tr><td>Ground Cinnamon</td><td>12 g</td></tr>
+
+<tr class="group-row"><td colspan="2">Assembly</td></tr>
+<tr><td>Lady Fingers</td><td>117 each</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Method</h2>
+<ol><li>Add 6 cups of water to the saucepan and bring the water to a slow boil.</li>
+<li>Mix the egg yolks and sugar in a mixing bowl and whisk together to incorporate.</li>
+<li>Place the mixing bowl over the saucepan and continue to whisk the yolks until the sugar is dissolved and the yolks are cooked and have reached 160°F.</li>
+<li class="critical"><strong>CRITICAL POINT:</strong> The cooked yolks should be thick, pale, fluffy, and completely free of lumps or any scrambled-egg consistency. When lifted with the whisk, the mixture should fall in a thick ribbon that briefly holds its shape before blending back in.</li>
+<li>Remove from the heat and continue whisking to cool, about 3 minutes.</li>
+<li>Combine the whipped yolks, mascarpone and cream cheese in the bowl of the tabletop mixer fitted with the whisk attachment. Mix, starting on low and gradually increasing to medium speed, until incorporated, homogeneous and free of lumps. Transfer to a stainless-steel mixing bowl and reserve.</li>
+<li>Add the heavy whipping cream to the bowl of a tabletop mixer fitted with a whisk attachment and whip to stiff peaks.</li>
+<li>With a rubber spatula, fold half of the whipped cream into the mascarpone-cream cheese-egg yolk mixture. Once fully incorporated, fold in the remaining whipped cream without overmixing. Overmixing will turn the mousse grainy. Reserve.</li>
+<li>Spread a thin layer of the cream cheese mousse at the bottom of each pan.</li>
+<li>In a stainless-steel mixing bowl, combine the cold brew coffee, instant espresso and cinnamon. Whisk thoroughly to incorporate and dissolve the instant espresso. Reserve cold.</li>
+<li>Dip, do not soak, the lady fingers in the spiced coffee mixture and layer the bottom of each pan.</li>
+<li>Spread a 1/2-inch layer of mousse over the dipped lady fingers.</li>
+<li>Add a second layer of dipped, not soaked, lady fingers.</li>
+<li>Add a second 1/2-inch layer of mousse and smooth evenly.</li>
+</ol>
+</section>
+
+<section>
+<h2>Package &amp; Rotate</h2>
+<div class="package">Transfer to the freezer uncovered for 3 hours.<br><br>Once frozen, label, date and rotate.<br><br>Store in the freezer.</div>
+</section>
+</main>
+
+<footer>SCC 0116 • TIRAMISU</footer>
+</article>
+
+</body>
+</html>
